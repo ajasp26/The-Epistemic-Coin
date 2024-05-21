@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about the webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Coin Flip Game</h1>
+        <p>Enter number of flips per trial (1-100000):</p>
+        <!-- Input field for the number of flips -->
+        <input type="text" id="flipInput" placeholder="Number of flips">
+        <!-- Button to start flipping the coin -->
+        <button onclick="flipCoins()">Flip</button>
+        <div id="coin-container">
+            <!-- Image of the coin -->
+            <img id="coin" src="coin.png" alt="Coin">
+        </div>
+        <!-- Paragraphs to display statistics -->
+        <p id="stats"></p>
+        <p id="totalFlips"></p>
+        <!-- Action buttons for continuing or concluding the game -->
+        <div id="action-buttons">
+            <button id="continueButton" onclick="askContinue()">Continue flipping to build evidence?</button>
+            <button id="concludeButton" onclick="prepareFinalDecision()">Ready to make a conclusion based on your evidence collected so far?</button>
+        </div>
+        <!-- Section to display the final decision -->
+        <div id="final-decision" style="display:none;">
+            <p>Do you think the coin is a weighted coin or not?</p>
+            <button onclick="finalGuess(true)">It is weighted</button>
+            <button onclick="finalGuess(false)">It is NOT weighted</button>
+        </div>
+        <!-- Section to restart the game -->
+        <div id="restart-section" style="display:none;">
+            <button onclick="restartGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
