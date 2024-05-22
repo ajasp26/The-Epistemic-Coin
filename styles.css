@@ -46,9 +46,10 @@ button {
     display: none;
 }
 
+/* Continuous rotation */
 @keyframes flip {
     0% { transform: rotateY(0deg) scale(1); }
-    100% { transform: rotateY(4320deg) scale(1); } /* Continuous rotation */
+    100% { transform: rotateY(4320deg) scale(1); } 
 }
 
 @keyframes coin-leave {

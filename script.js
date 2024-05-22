@@ -16,7 +16,7 @@ function flipCoins() {
     }
     
     const coin = document.getElementById('coin');
-    coin.style.animation = 'flip 2s linear infinite';  // Slower continuous rotation
+    coin.style.animation = 'flip 2s linear infinite';  
     setTimeout(() => {
         coin.style.animation = 'none';
         for (let i = 0; i < numFlips; i++) {
@@ -30,7 +30,7 @@ function flipCoins() {
             document.getElementById('continueButton').style.display = 'inline-block';
             document.getElementById('concludeButton').style.display = 'inline-block';
         }
-    }, 2000);  // Match duration to the animation duration
+    }, 2000);  
 }
 
 function updateStats() {
@@ -64,11 +64,11 @@ function finalGuess(isWeightedGuess) {
 
 function restartGame() {
     const coin = document.getElementById('coin');
-    coin.style.animation = 'coin-leave 1s linear';  // Continuous rotation while moving out
+    coin.style.animation = 'coin-leave 1s linear'; 
     setTimeout(() => {
         resetGame();
-        coin.style.animation = 'coin-enter 1s linear';  // Continuous rotation while moving in
-    }, 1000);  // Match duration to the animation duration
+        coin.style.animation = 'coin-enter 1s linear';  
+    }, 1000);  
 }
 
 function resetGame() {
